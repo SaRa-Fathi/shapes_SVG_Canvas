@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.MathJax = {
+        MathML: { extensions: ["mml3.js", "content-mathml.js"] },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"
+    ></script>
+  </head>
+  <body>
+    <h2>SVG</h2>
+    <svg style="border: 2px solid black" width="350" height="255">
+      <polygon
+        points="240,10 240,230 100,230"
+        width="100"
+        height="50"
+        style="fill: red; stroke: rgb(0, 124, 128); stroke-width: 2"
+      />
+    </svg>
+    <br /><br />
+    <hr />
+    <h3>According to pythagoras theroem :</h3>
+    <math style="color: red; font-weight: bold">
+      <mrow>
+        <mi>C</mi>
+        <mi>=</mi>
+        <msqrt>
+          <msup>
+            <mi>a</mi>
+            <mn>2</mn>
+          </msup>
+          <mo> + </mo>
+          <msup>
+            <mi>b</mi>
+            <mn>2</mn>
+          </msup>
+        </msqrt>
+      </mrow>
+    </math>
+    
+  </body>
+</html>

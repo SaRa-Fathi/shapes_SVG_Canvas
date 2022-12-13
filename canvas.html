@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Canvas</h3>
+    <canvas
+      width="400"
+      height="400"
+      style="border: 2px solid rgb(173, 49, 49)"
+      id="canv"
+    ></canvas>
+
+    <script>
+        function draw() {
+        var canv=document.getElementById("canv");
+        var ctx=canv.getContext("2d");
+        var startX = 0;
+        var startY = 0;
+        var endX = 400;
+        var endY = 400;
+        var amount = 0;
+        var set=setInterval(function () {
+          amount += 0.05;
+          ctx.clearRect(0, 0, canv.width, canv.height);
+          ctx.strokeStyle="rgb(173, 49, 49)";
+          ctx.lineWidth=5;
+          ctx.moveTo(startX, startY);
+          ctx.lineTo(
+            startX + (endX - startX) * amount,
+            startY + (endY - startY) * amount
+          );
+          ctx.stroke();
+        //   if(endX==canv.width || endY==canv.height){
+        //     clearInterval(set);
+        //     alert("animation ends");
+        // }
+          
+          
+        }, 250);
+        // console.log(startX);
+        // console.log(startY);
+        // console.log(endX);
+        // console.log(endY);
+        
+        if(endX==canv.width || endY==canv.height){
+            // clearInterval(set);
+            alert("animation ends");
+        }
+    }
+        draw();
+    </script>
+</body>
+</html>
